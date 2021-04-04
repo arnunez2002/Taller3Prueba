@@ -62,7 +62,7 @@ public class CapitalizeServer {
 		}
 	}
 
-	public void crearFlujo() {
+	public void crearFlujo(ServerSocket sk) {
 		try {
 			InputStream is = socket.getInputStream();
 			InputStreamReader isr = new InputStreamReader(is);
