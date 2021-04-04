@@ -1,3 +1,7 @@
 Estado,Especie,TamaÃ±o,Localidad,Direccion,Nombre dueÃ±o,Telefono,Email,Comentarios
 Perdido,CANINO,GRANDE,USAQUEN,NO SE,EL POLLO,123456,ELRARO,SE MURIO
-Perdido,GATO,PEQUEÃ‘O,CHAPINERO,SI SE,NO SE,123456678,L,SE PERDIO
+Perdido,GATO,PEQUEÃ?O,CHAPINERO,SI SE,NO SE,123456678,L,SE PERDIO
+Perdido,CANINO,GRANDE,USAQUEN,USAQUEN CEDRITOS,ANDRES NUÑEZ,12334,ARNUNEZ@UNBOSUQE.COM,NADA
+Animal Peligroso,,caninc,pequeño,usaquen,cedritos,dueño 123,123421,dueño@gmail.com
+Perdido,Canino,Grande,Usaquen,cedritos,andres nueñz,12312,arnunez@gm.com,nada
+Perdido,Canino,grande,usaquen,cedritos,andres,1223123123,arnunez@gnmail.com,nada

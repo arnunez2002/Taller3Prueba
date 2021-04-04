@@ -1,4 +1,4 @@
-
+package co.edu.unbosque.socket;
 import CSV.operacionCSV;
 import Modelo.pet;
 import com.csvreader.CsvReader;
@@ -16,7 +16,7 @@ public class Capitalizer implements Runnable {
     private Socket socket;
     List<pet> listaPets = new ArrayList<pet>();
     operacionCSV archivo = new operacionCSV();
-
+    CapitalizeServer server = new CapitalizeServer();
 
     public Capitalizer(Socket socket) {
         this.socket = socket;
@@ -34,6 +34,8 @@ public class Capitalizer implements Runnable {
             var out = new PrintWriter(socket.getOutputStream(), true);
 
             while (in.hasNextLine()) {
+            	
+            	
                 var message = in.nextLine();
                 safePrintln("La opcion elegida fue " + message + " Crear caso");
 
@@ -51,7 +53,7 @@ public class Capitalizer implements Runnable {
                         String especie = in.nextLine();
 
                         out.println("Tamaño");
-                        String tamaño = in.nextLine();
+                        String tama�o = in.nextLine();
 
                         out.println("Localidad");
                         String localidad = in.nextLine();
@@ -73,12 +75,12 @@ public class Capitalizer implements Runnable {
 
                         safePrintln("----------------------------");
                         safePrintln("Perdida");
-                        safePrintln("La info es" + "\n" + "Especie: " + especie + "\n" + "Tamaño: " + tamaño + "\n" + "Localidad: " + localidad + "\n" + "Direccion: " + direccion + "\n" + "Nombre de la persona: " + nombrePersona + "\n" + "Telefono: " + telefono + "\n" + "Email: " + email + "\n" + "Comentarios: " + comentarios);
+                        safePrintln("La info es" + "\n" + "Especie: " + especie + "\n" + "Tamaño: " + tama�o + "\n" + "Localidad: " + localidad + "\n" + "Direccion: " + direccion + "\n" + "Nombre de la persona: " + nombrePersona + "\n" + "Telefono: " + telefono + "\n" + "Email: " + email + "\n" + "Comentarios: " + comentarios);
                         safePrintln("----------------------------");
 
                         out.println("El caso esta registrado");
 
-                        pet listaPet= new pet("Perdido",especie,tamaño,localidad,direccion,nombrePersona,telefono,email,comentarios);
+                        pet listaPet= new pet("Perdido",especie,tama�o,localidad,direccion,nombrePersona,telefono,email,comentarios);
 
                         listaPets.add(listaPet);
                         out.println(listaPets.size());
@@ -92,7 +94,7 @@ public class Capitalizer implements Runnable {
                         var especie = in.nextLine();
 
                         out.println("Tamaño");
-                        var tamaño = in.nextLine();
+                        var tama�o = in.nextLine();
 
                         out.println("Localidad");
                         var localidad = in.nextLine();
@@ -114,12 +116,12 @@ public class Capitalizer implements Runnable {
 
                         safePrintln("----------------------------");
                         safePrintln("Robo");
-                        safePrintln("La info es" + "\n" + "Especie: " + especie + "\n" + "Tamaño: " + tamaño + "\n" + "Localidad: " + localidad + "\n" + "Direccion: " + direccion + "\n" + "Nombre de la persona: " + nombrePersona + "\n" + "Telefono: " + telefono + "\n" + "Email: " + email + "\n" + "Comentarios: " + comentarios);
+                        safePrintln("La info es" + "\n" + "Especie: " + especie + "\n" + "Tamaño: " + tama�o + "\n" + "Localidad: " + localidad + "\n" + "Direccion: " + direccion + "\n" + "Nombre de la persona: " + nombrePersona + "\n" + "Telefono: " + telefono + "\n" + "Email: " + email + "\n" + "Comentarios: " + comentarios);
                         safePrintln("----------------------------");
 
                         out.println("El caso esta registrado");
 
-                        pet listaPet= new pet("Robo",especie,tamaño,localidad,direccion,nombrePersona,telefono,email,comentarios);
+                        pet listaPet= new pet("Robo",especie,tama�o,localidad,direccion,nombrePersona,telefono,email,comentarios);
 
                         listaPets.add(listaPet);
                         out.println(listaPets.size());
@@ -132,7 +134,7 @@ public class Capitalizer implements Runnable {
                         var especie = in.nextLine();
 
                         out.println("Tamaño");
-                        var tamaño = in.nextLine();
+                        var tama�o = in.nextLine();
 
                         out.println("Localidad");
                         var localidad = in.nextLine();
@@ -154,12 +156,12 @@ public class Capitalizer implements Runnable {
 
                         safePrintln("----------------------------");
                         safePrintln("Abandono");
-                        safePrintln("La info es" + "\n" + "Especie: " + especie + "\n" + "Tamaño: " + tamaño + "\n" + "Localidad: " + localidad + "\n" + "Direccion: " + direccion + "\n" + "Nombre de la persona: " + nombrePersona + "\n" + "Telefono: " + telefono + "\n" + "Email: " + email + "\n" + "Comentarios: " + comentarios);
+                        safePrintln("La info es" + "\n" + "Especie: " + especie + "\n" + "Tamaño: " + tama�o + "\n" + "Localidad: " + localidad + "\n" + "Direccion: " + direccion + "\n" + "Nombre de la persona: " + nombrePersona + "\n" + "Telefono: " + telefono + "\n" + "Email: " + email + "\n" + "Comentarios: " + comentarios);
                         safePrintln("----------------------------");
 
                         out.println("El caso esta registrado");
 
-                        pet listaPet= new pet("Abandono",especie,tamaño,localidad,direccion,nombrePersona,telefono,email,comentarios);
+                        pet listaPet= new pet("Abandono",especie,tama�o,localidad,direccion,nombrePersona,telefono,email,comentarios);
 
                         listaPets.add(listaPet);
                         out.println(listaPets.size());
@@ -173,7 +175,7 @@ public class Capitalizer implements Runnable {
                         var especie = in.nextLine();
 
                         out.println("Tamaño");
-                        var tamaño = in.nextLine();
+                        var tama�o = in.nextLine();
 
                         out.println("Localidad");
                         var localidad = in.nextLine();
@@ -195,12 +197,12 @@ public class Capitalizer implements Runnable {
 
                         safePrintln("----------------------------");
                         safePrintln("Animal Peligroso");
-                        safePrintln("La info es" + "\n" + "Especie: " + especie + "\n" + "Tamaño: " + tamaño + "\n" + "Localidad: " + localidad + "\n" + "Direccion: " + direccion + "\n" + "Nombre de la persona: " + nombrePersona + "\n" + "Telefono: " + telefono + "\n" + "Email: " + email + "\n" + "Comentarios: " + comentarios);
+                        safePrintln("La info es" + "\n" + "Especie: " + especie + "\n" + "Tamaño: " + tama�o + "\n" + "Localidad: " + localidad + "\n" + "Direccion: " + direccion + "\n" + "Nombre de la persona: " + nombrePersona + "\n" + "Telefono: " + telefono + "\n" + "Email: " + email + "\n" + "Comentarios: " + comentarios);
                         safePrintln("----------------------------");
 
                         out.println("El caso esta registrado");
 
-                        pet listaPet= new pet("Animal Peligroso",especie,tamaño,localidad,direccion,nombrePersona,telefono,email,comentarios);
+                        pet listaPet= new pet("Animal Peligroso",especie,tama�o,localidad,direccion,nombrePersona,telefono,email,comentarios);
 
                         listaPets.add(listaPet);
                         out.println(listaPets.size());
@@ -214,7 +216,7 @@ public class Capitalizer implements Runnable {
                         var especie = in.nextLine();
 
                         out.println("Tamaño");
-                        var tamaño = in.nextLine();
+                        var tama�o = in.nextLine();
 
                         out.println("Localidad");
                         var localidad = in.nextLine();
@@ -236,12 +238,12 @@ public class Capitalizer implements Runnable {
 
                         safePrintln("----------------------------");
                         safePrintln("Manejo indebido en via publica");
-                        safePrintln("La info es" + "\n" + "Especie: " + especie + "\n" + "Tamaño: " + tamaño + "\n" + "Localidad: " + localidad + "\n" + "Direccion: " + direccion + "\n" + "Nombre de la persona: " + nombrePersona + "\n" + "Telefono: " + telefono + "\n" + "Email: " + email + "\n" + "Comentarios: " + comentarios);
+                        safePrintln("La info es" + "\n" + "Especie: " + especie + "\n" + "Tamaño: " + tama�o + "\n" + "Localidad: " + localidad + "\n" + "Direccion: " + direccion + "\n" + "Nombre de la persona: " + nombrePersona + "\n" + "Telefono: " + telefono + "\n" + "Email: " + email + "\n" + "Comentarios: " + comentarios);
                         safePrintln("----------------------------");
 
                         out.println("El caso esta registrado");
 
-                        pet listaPet= new pet("Manejo indebido en via publica",especie,tamaño,localidad,direccion,nombrePersona,telefono,email,comentarios);
+                        pet listaPet= new pet("Manejo indebido en via publica",especie,tama�o,localidad,direccion,nombrePersona,telefono,email,comentarios);
 
                         listaPets.add(listaPet);
                         out.println(listaPets.size());
@@ -251,9 +253,12 @@ public class Capitalizer implements Runnable {
 
                     }
                 }else if(message.equals("2")){
-
-                    out.println("paso");
-
+                	
+            System.out.println("pasa");
+                	server.abrirPuerto();
+                	server.esperarCliente();
+                	server.crearFlujo();
+                	server.esperarCliente();
                 }
             }
         } catch (Exception e) {
@@ -266,6 +271,8 @@ public class Capitalizer implements Runnable {
             safePrintln("Closed: " + socket);
         }
     }
+    
+    
 
     public void safePrintln(String s) {
         synchronized (System.out) {
@@ -282,7 +289,7 @@ public class Capitalizer implements Runnable {
             while(leerPet.readRecord()) {
                 String estado = leerPet.get(0);
                 String especie = leerPet.get(1);
-                String tamaño = leerPet.get(2);
+                String tama�o = leerPet.get(2);
                 String localidad = leerPet.get(3);
                 String direccion = leerPet.get(4);
                 String nombre = leerPet.get(5);
@@ -291,7 +298,7 @@ public class Capitalizer implements Runnable {
                 String comentario = leerPet.get(8);
 
 
-                listaPets.add(new pet(estado, especie, tamaño,localidad,direccion,nombre,telefono,email,comentario)); // Añade la informacion a la lista
+                listaPets.add(new pet(estado, especie, tama�o,localidad,direccion,nombre,telefono,email,comentario)); // Añade la informacion a la lista
             }
 
             leerPet.close(); // Cierra el archivo

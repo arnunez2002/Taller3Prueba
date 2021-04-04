@@ -1,14 +1,18 @@
 package CSV;
 
 import Modelo.pet;
-import com.csvreader.CsvReader;
-import com.csvreader.CsvWriter;
+//import com.csvreader.CsvReader;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.csvreader.CsvReader;
+import com.csvreader.CsvWriter;
+
 
 public class operacionCSV {
 
@@ -45,7 +49,7 @@ public class operacionCSV {
             for(pet listaPet : pets) {
                 salidaCSV.write(listaPet.getEstado());
                 salidaCSV.write(listaPet.getEspecie());
-                salidaCSV.write(listaPet.getTamaÃ±o());
+                salidaCSV.write(listaPet.getTamaño());
                 salidaCSV.write(listaPet.getLocalidad());
                 salidaCSV.write(listaPet.getDireccion());
                 salidaCSV.write(listaPet.getNombre());
